@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitchen Gadegts</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bagnavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://bagstore.pk/wp-content/uploads/2022/06/logo-2.png" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active link" aria-current="page" href="index.html">Home</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link active link" aria-current="page" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active link" aria-current="page" href="Contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active link" aria-current="page" href="Shop.html">Shop</a>
+          </li>
+        </ul>
+          <!-- <form class="d-flex form" role="search">
+            <select onchange="productChange()" name="products" id="productMenu">
+              <option value="">Select Main Category </option>
+            </select>&nbsp;&nbsp;
+
+            <select onchange="filterProduct()" name="category" id="categoryMenu">
+              <option value="">Select Sub Category </option>
+            </select>
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
+    data-bs-pause="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/bag01.JPG" class="d-block w-100 bags" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bag02.JPG" class="d-block w-100 bags" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bag03.JPG" class="d-block w-100 image-banner-third baggg" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <div id="tsparticles" class="container ">
+    <div class="row">
+      <div class="col-9 main-content">
+        <h1 class="text-center bags mt-4 px-4 py-3">All Gadegts</h1>
+        <div id="allBagsCards" class="mt-2 row row-cols-1 row-cols-md-3 g-4"></div>
+        <div id="cartItems"></div>
+        <div id="carouselExampleSlidesOnly"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer mt-4">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>BagStore</h3>
+        <p>
+          BagStore provides stylish and high-quality bags for every occasion.
+          Shop with confidence and upgrade your fashion today.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Email: support@bagstore.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Karachi, Pakistan</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Kitchen Gadegts | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-firefly@3/tsparticles.preset.firefly.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
