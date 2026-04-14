@@ -1,18 +1,20 @@
 .bagnavbar {
-    background-color: #440202;
-    color: #fff;
-    position: fixed !important;
+    background-color: #580101;
+    color: #fc9999;
+    position: fixed;
     top: 0px;
     z-index: 1;
     width: 100%;
 }
 .logo{
-    width: 50px;
-    height: 50px;
+    width: 175px;
+    height: 75px;
     /* position: absolute; */
     right: 100px;
 }
-
+.baggg{
+    height: 540px;
+}
 .navbar-nav{
     color: white;
 }
