@@ -480,6 +480,13 @@
 // // });
 
 
+function allGadgets(a,b,c,d){
+    this.name = a;
+    this.price = b;
+    this.description = c;
+    this.src = d;
+}
+
 
 
 
