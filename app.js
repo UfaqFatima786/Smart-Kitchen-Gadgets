@@ -487,7 +487,13 @@ function allGadgets(a,b,c,d){
     this.src = d;
 }
 
+var grill = [
+    new grill1( "BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
+    new grill2("BBQ Charcoal Grill", "12000 PKR", "A compact grill for quick and easy barbecuing.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Heavy-Duty-BBQ-Charcoal-Smoker-Grill-with-Chimney-Thermometer-%E2%80%93-Adjustable-Height.jpg?resize=247%2C247&ssl=1"),
+    new grill3("Portable Gas Grill", "20000 PKR", "A convenient grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Portable-Round-Trolley-BBQ-Grill-3.jpg?resize=400%2C400&ssl=1"),
+    new grill3("Mini Grill", "20000 PKR", "A mini grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/BBQ-Fan-Air-Blower-Hand-Crank-%E2%80%93-Mini-Grill-Fire-Starter-Tool-for-Camping-5.jpg?resize=247%2C247&ssl=1"),
 
+]
 
 
 
