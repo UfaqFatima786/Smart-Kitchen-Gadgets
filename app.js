@@ -5,7 +5,7 @@ function allGadgets(a, b, c) {
 }
 
 var grill = [
-    new allGadgets("BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
+        new allGadgets("BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
     new allGadgets("BBQ Charcoal Grill", "12000 PKR", "A compact grill for quick and easy barbecuing.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Heavy-Duty-BBQ-Charcoal-Smoker-Grill-with-Chimney-Thermometer-%E2%80%93-Adjustable-Height.jpg?resize=247%2C247&ssl=1"),
     new allGadgets("Portable Gas Grill", "20000 PKR", "A convenient grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Portable-Round-Trolley-BBQ-Grill-3.jpg?resize=400%2C400&ssl=1"),
     new allGadgets("Mini Grill", "20000 PKR", "A mini grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/BBQ-Fan-Air-Blower-Hand-Crank-%E2%80%93-Mini-Grill-Fire-Starter-Tool-for-Camping-5.jpg?resize=247%2C247&ssl=1"),
@@ -32,29 +32,7 @@ var glasssets = [
     new allGadgets("Ceramic Printed Cup-Saucer Set", "15,000 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Ceramic-Printed-Cup-Saucer-Set-of-6-Gift-Box.jpg?resize=400%2C400&ssl=1"),
 ];
 
-allGadgets.prototype.renderCard = function(){
-    return`<div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm selling-card">
-                    <div class="position-relative overflow-hidden rounded-top-4">
-                        <img src="${this.img}" class="card-img-top item-img" >
-                        
-                    </div>
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold">${this.name}</h5>
-                        
-                        <div class="card-footer bag-footer d-flex flex-column align-items-center">
-                              <small class="text-body-secondary price">
-                              <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="h5 fw-bold mb-0 text-red">$${this.price}</span>
-                            <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
-                        </div>
-                    </div>
-                      </div>
-                    </div>
-                </div>
-            </div>`
-}
-}
+
 
 // AllProducts.prototype.renderCard = function(){
 //     return`<div class="col-md-6 col-lg-3">
