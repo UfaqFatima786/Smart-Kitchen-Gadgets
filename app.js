@@ -34,24 +34,23 @@ var glasssets = [
 
 
 
-// AllProducts.prototype.renderCard = function(){
-//     return`<div class="col-md-6 col-lg-3">
-//                 <div class="card h-100 border-0 shadow-sm selling-card">
-//                     <div class="position-relative overflow-hidden rounded-top-4">
-//                         <img src="${this.img}" class="card-img-top item-img" alt="Burger">
+allGadgets.prototype.renderCard = function(){
+    return`<div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm selling-card">
+                    <div class="position-relative overflow-hidden rounded-top-4">
+                        <img src="${this.src}" class="card-img-top item-img">
                         
-//                     </div>
-//                     <div class="card-body p-4">
-//                         <h5 class="card-title fw-bold">${this.name}</h5>
-//                         <p class="card-text text-muted small">${this.description}</p>
-//                         <div class="d-flex justify-content-between align-items-center mt-3">
-//                             <span class="h5 fw-bold mb-0 text-red">$${this.price}</span>
-//                             <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>`
-// }
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">${this.name}</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="h5 fw-bold mb-0 text-red">$${this.price}</span>
+                            <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+}
 
 
 var ourItems = document.getElementById("ourItems");
