@@ -12,8 +12,8 @@
     /* position: absolute; */
     right: 100px;
 }
-.baggg{
-    height: 540px;
+.gadgets{
+    height: 550px;
 }
 .navbar-nav{
     color: white;
@@ -26,7 +26,7 @@
     color: #ffffff;
 }
 .navbar-nav .link:hover {
-    color: #af6e6e !important;
+    color: #fd9f9f !important;
 }
 .bags {
     color: rgb(3, 3, 248);
@@ -113,7 +113,7 @@
 }
 
 .footer-col ul li a:hover {
-  color: #9ecbff;
+  color: #ff9e9e;
 }
 
 .footer-bottom {
