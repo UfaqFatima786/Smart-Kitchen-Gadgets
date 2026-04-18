@@ -3,14 +3,6 @@ function allGadgets(a, b, c) {
     this.price = b;
     this.src = c;
 }
-
-var grill = [
-    new allGadgets("BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
-    new allGadgets("BBQ Charcoal Grill", "12000 PKR", "A compact grill for quick and easy barbecuing.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Heavy-Duty-BBQ-Charcoal-Smoker-Grill-with-Chimney-Thermometer-%E2%80%93-Adjustable-Height.jpg?resize=247%2C247&ssl=1"),
-    new allGadgets("Portable Gas Grill", "20000 PKR", "A convenient grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Portable-Round-Trolley-BBQ-Grill-3.jpg?resize=400%2C400&ssl=1"),
-    new allGadgets("Mini Grill", "20000 PKR", "A mini grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/BBQ-Fan-Air-Blower-Hand-Crank-%E2%80%93-Mini-Grill-Fire-Starter-Tool-for-Camping-5.jpg?resize=247%2C247&ssl=1"),
-];
-
 var warmDishes = [
     new allGadgets("Porcelain Buffet Dish WarmFood", "25000 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/03/Porcelain-Buffet-Dish-Food-Warmer-Set.jpg?resize=247%2C247&ssl=1"),
     new allGadgets("Food Warmer with Glass Dish", "30000 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/01/Food-Warmer-with-Glass-Dish-4-%C3%97-1.5-Liter-K710-1.jpg?resize=247%2C247&ssl=1"),
@@ -31,6 +23,13 @@ var glasssets = [
     new allGadgets("Crystal Wine Glass Set of 6PCS", "2,150 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Crystal-Wine-Glass-Set-of-6-Golden-Line-1.jpg?resize=400%2C400&ssl=1"),
     new allGadgets("Ceramic Printed Cup-Saucer Set", "15,000 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Ceramic-Printed-Cup-Saucer-Set-of-6-Gift-Box.jpg?resize=400%2C400&ssl=1"),
 ];
+var grill = [
+    new allGadgets("BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
+    new allGadgets("BBQ Charcoal Grill", "12000 PKR", "A compact grill for quick and easy barbecuing.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Heavy-Duty-BBQ-Charcoal-Smoker-Grill-with-Chimney-Thermometer-%E2%80%93-Adjustable-Height.jpg?resize=247%2C247&ssl=1"),
+    new allGadgets("Portable Gas Grill", "20000 PKR", "A convenient grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Portable-Round-Trolley-BBQ-Grill-3.jpg?resize=400%2C400&ssl=1"),
+    new allGadgets("Mini Grill", "20000 PKR", "A mini grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/BBQ-Fan-Air-Blower-Hand-Crank-%E2%80%93-Mini-Grill-Fire-Starter-Tool-for-Camping-5.jpg?resize=247%2C247&ssl=1"),
+];
+
 
 
  allGadgets.prototype.renderCard= function(){
@@ -53,10 +52,7 @@ var glasssets = [
    };
 
 
-var ourItems = document.getElementById("ourItems");
-for(var item of grill){
-    ourItems.innerHTML += item.renderCard();
-}
+var ourItems = document.getElementById("ouritems");
 for(var item of warmDishes){
     ourItems.innerHTML += item.renderCard();
 }
@@ -64,6 +60,9 @@ for(var item of dinnerset){
     ourItems.innerHTML += item.renderCard();
 }
 for(var item of glasssets){
+    ourItems.innerHTML += item.renderCard();
+}
+for(var item of grill){
     ourItems.innerHTML += item.renderCard();
 }
 
