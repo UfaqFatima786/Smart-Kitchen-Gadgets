@@ -253,3 +253,64 @@
     height: 250px;
     width: 150px;
 }
+
+
+body
+{
+    font-family: sans-serif;
+}
+
+/* Logo */
+
+.logo
+{
+    width:120px;
+}
+
+/* Carousel */
+
+.gadgets
+{
+    height:500px;
+    object-fit:cover;
+}
+
+/* Hero Section */
+
+.hero-text
+{
+    margin-top:30px;
+}
+
+.shop-btn
+{
+    margin-top:10px;
+}
+
+/* Category Cards */
+
+.category-card
+{
+    transition:.3s;
+}
+
+.category-card:hover
+{
+    transform:scale(1.05);
+}
+
+/* Product Cards */
+
+.product-card img
+{
+    height:250px;
+    object-fit:cover;
+}
+
+/* Why Us */
+
+.why-us
+{
+    background:#f8f9fa;
+    padding:40px;
+}
