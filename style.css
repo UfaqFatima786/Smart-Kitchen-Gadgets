@@ -296,7 +296,12 @@
     background: #9e4e4e;
     cursor: pointer;
 }
-
+.card-title{
+    color: #ffffff;
+}
+.productname{
+    color: #ffffff;
+}
 @media(max-width:768px) {
 
     .about-section {

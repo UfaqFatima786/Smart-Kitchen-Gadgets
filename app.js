@@ -36,8 +36,8 @@ var tray = [
 
 
 
- allGadgets.prototype.renderCard= function(){
-    return`
+allGadgets.prototype.renderCard = function () {
+    return `
 
      <div class="col">
     <div class="card h-100">
@@ -47,149 +47,119 @@ var tray = [
       </div>
       <div class="card-footer">
         <small class="text-body-secondary">Price:${this.price}</small>
-        <button onclick="addToCart('$')" class="bg-black text-white px-2 py-2 rounded border-0"> Add to Cart </button>
-
+ <button onclick='addToCart(${JSON.stringify(this)})'
+        class="bg-black text-white px-2 py-2 rounded border-0">
+        Add to Cart
+        </button>
       </div>
     </div>
   </div>
           `
-   };
-
-
+};
 var ourItems = document.getElementById("ouritems");
-for(var item of warmDishes){
+for (var item of warmDishes) {
     ourItems.innerHTML += item.renderCard();
 }
-for(var item of dinnerset){
+for (var item of dinnerset) {
     ourItems.innerHTML += item.renderCard();
 }
-for(var item of glasssets){
+for (var item of glasssets) {
     ourItems.innerHTML += item.renderCard();
 }
-for(var item of bowls){
+for (var item of bowls) {
     ourItems.innerHTML += item.renderCard();
 }
-for(var item of tray){
+for (var item of tray) {
     ourItems.innerHTML += item.renderCard();
 }
 
-function addToCart(main, sub, type, product) {
-    var selectedProduct = allProducts[main][sub][type][product];
-    
+var cart = [];
+
+function addToCart(product) {
+
+    cart.push(product);
+
+    showCart();
+}
+
+function showCart() {
+
+    var cartItems = document.getElementById("cartItems");
+
+    cartItems.innerHTML = "";
+
+    for (var item of cart) {
+
+        cartItems.innerHTML += `
+        <div class="d-flex align-items-center gap-2 border p-2 mb-2">
+
+        <img src="${item.src}" width="50">
+
+        <div>
+        <div>${item.name}</div>
+        <div>${item.price}</div>
+        </div>
+
+        </div>
+        `;
+    }
+}
+
+
+
+function addToCart(product) {
+
+    cart.push(product);
+
+    // hide carousel if exists
     var carousel = document.getElementById("carouselExampleSlidesOnly");
-    if(carousel) carousel.style.display = "none";
+    if (carousel) {
+        carousel.style.display = "none";
+    }
 
-    var mainContent = document.querySelector('.main-content');
+    // hide product grid
+    var productsSection = document.getElementById("ouritems");
+    if (productsSection) {
+        productsSection.style.display = "none";
+    }
+
+    // show success card screen
+    var mainContent = document.querySelector(".container") || document.body;
+
     mainContent.innerHTML = `
-        <h1 class="text-center text-success mt-4">Product Added Successfully!</h1>
-        <div class="card mt-4 p-4 shadow-lg mx-auto" style="max-width: 500px; border-radius: 15px; background: #c6bcffff;">
-            <img src="${selectedProduct.src}" class="card-img-top mx-auto" style="max-width: 350px; border-radius: 10px;" alt="...">
+    
+        <h1 class="text-center productname mt-4">
+        Product Added Successfully!
+        </h1>
+
+        <div class="card mt-4 p-4 shadow-lg mx-auto"
+        style="max-width: 500px;
+        border-radius: 15px;
+        background: #ffbcbc;">
+
+            <img src="${product.src}"
+            class="card-img-top mx-auto"
+            style="max-width: 350px;
+            border-radius: 10px;">
+
             <div class="card-body text-center">
-                <h3 class="card-title text-primary fw-bold mt-2">${selectedProduct.name.toUpperCase()}</h3>
-                <p class="card-text fs-5 text-secondary mt-3">${selectedProduct.description || ''}</p>
+
+                <h3 class="card-title fw-bold mt-2">
+                ${product.name.toUpperCase()}
+                </h3>
+
                 <div class="mt-3">
-                    <h4 class="text-success fw-bold m-0 p-3" style="background: #e8f5e9; border-radius: 10px;">Price: ${selectedProduct.price}</h4>
+                    <h4 class="text-success fw-bold m-0 p-3"
+                    style="background: #e8f5e9;
+                    border-radius: 10px;">
+                    Price: ${product.price}
+                    </h4>
                 </div>
-                <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold">Continue Shopping</button>
+                <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold"> Continue Shopping </button>
+
             </div>
+
         </div>
     `;
 }
-
-// function displayCat(cat){
-// ourMenu.innerHTML ="" ;
-// for(item of cat){
-//     ourMenu.innerHTML += item.renderCard();
-// }
-// }
-// function displayAll(){
-//   var ourMenu = document.getElementById("ourItems");
-//   ourItems.innerHTML ="" ;
-// for(var item of burgers){
-//     ourMenu.innerHTML += item.renderCard();
-// }
-// for(var item of pizzas){
-//     ourMenu.innerHTML += item.renderCard();
-// }
-// for(var item of cakes){
-//     ourMenu.innerHTML += item.renderCard();
-// }
-// for(var item of coffees){
-//     ourMenu.innerHTML += item.renderCard();
-// }
-// for(var item of salads){
-//     ourMenu.innerHTML += item.renderCard();
-// }  
-// }
-// var allgadgets = document.getElementById("allhomegadgets"); 
-
-//   allgadgets.innerHTML += `<div class="col-md-6 col-lg-3">
-//                 <div class="card h-100 border-0 shadow-sm selling-card">
-//                     <div class="position-relative overflow-hidden rounded-top-4">
-//                         <img src="${this.img}" class="card-img-top item-img" alt="Burger">
-                        
-//                     </div>
-//                      <div class="card-body p-4">
-//                         <h5 class="card-title fw-bold">${this.name}</h5>
-//                         <p class="card-text text-muted small">${this.description}</p>
-//                         <div class="d-flex justify-content-between align-items-center mt-3">
-//                              <span class="h5 fw-bold mb-0 text-red">$${this.price}</span>
-//                           <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
-//                          </div>
-//                     </div>
-//                 </div>
-//             </div>`
-// }
-// for (var maincategory in allProducts) {
-//     // console.log(allProducts[products]);
-//     for (var subcategory in allProducts[maincategory]) {
-//         // console.log(allProducts[maincategory][categories]);
-//         for (var type in allProducts[maincategory][subcategory]) {
-//             // console.log(allProducts[maincategory][categories][brands]);
-//             for (var product in allProducts[maincategory][subcategory][type]) {
-//                 // console.log(allProducts[maincategory][categories][brands][items].price);
-//                 allCards.innerHTML += `
-//                 <div class="col">               
-//                      <div class="card h-100">
-//                         <img src="${allProducts[maincategory][subcategory][type][product].src}" class="card-bag-img-top" alt="..." />
-//                       <div class="card-body custom-body">
-//                        <h5 class="card-title -custom-title">${allProducts[maincategory][subcategory][type][product].name.toUpperCase()}</h5>
-//                          <p class="card-text">
-//                          ${allProducts[maincategory][subcategory][type][product].description}
-//                           </p>
-//                           </div>
-//                           <div class="card-footer bag-footer d-flex flex-column align-items-center">
-//                               <small class="text-body-secondary price">
-                            //  Price: ${allProducts[maincategory][subcategory][type][product].price}/-
-//                                   </small>
-//                                <button onclick="addToCart('${maincategory}', '${subcategory}', '${type}', '${product}')" class="bg-primary text-white px-2 py-2 rounded border-0"> Add to Cart </button>
-
-//                        </div>
-                        
-//                     </div>
-//                 </div>`;
-//             }
-//         }
-//     }
-// }
-
-// allGadgets.prototype.renderCard = function(){
-//     return`<div class="col-md-6 col-lg-3">
-//                 <div class="card h-100 border-0 shadow-sm selling-card">
-//                     <div class="position-relative overflow-hidden rounded-top-4">
-//                         <img src="${this.img}" class="card-img-top item-img" alt="Burger">
-                        
-//                     </div>
-//                     <div class="card-body p-4">
-//                         <h5 class="card-title fw-bold">${this.name}</h5>
-//                         <p class="card-text text-muted small">${this.description}</p>
-//                         <div class="d-flex justify-content-between align-items-center mt-3">
-//                             <span class="h5 fw-bold mb-0 text-red">$${this.price}</span>
-//                             <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>`
-// }
-
 
