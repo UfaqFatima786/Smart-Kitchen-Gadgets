@@ -33,8 +33,16 @@ var tray = [
     new allGadgets("Melamine White Medium Bowl", "7000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1770111721_y1.jpg"),
     new allGadgets("Melamine Black Serving Platter", "6000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1770722191_ccccccccccccccccccc_(33).jpg"),
 ];
-
-
+var spoon = [
+    new allGadgets("white Soup Spoon", "200 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772270630_ccccccccccccccccccc_(21).jpg"),
+    new allGadgets("Vlack curry Serving Spoon", "200 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772270059_ccccccccccccccccccc_(12).jpg"),
+    new allGadgets("black spoon", "199 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772270776_ccccccccccccccccccc_(19).jpg"),
+];
+var plate = [
+    new allGadgets("white Soup Spoon", "900 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407813_ccccccccccccccccccc_(6).jpg"),
+new allGadgets("melamine white plate", "900 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407624_ccccccccccccccccccc_(7).jpg"),
+new allGadgets("melamine black medium plate", "700 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407440_ccccccccccccccccccc_(8).jpg"),
+];
 
 allGadgets.prototype.renderCard = function () {
     return `
@@ -72,6 +80,13 @@ for (var item of bowls) {
 for (var item of tray) {
     ourItems.innerHTML += item.renderCard();
 }
+for (var item of spoon) {
+    ourItems.innerHTML += item.renderCard();
+}
+for (var item of plate) {
+    ourItems.innerHTML += item.renderCard();
+}
+
 
 var cart = [];
 
@@ -131,7 +146,6 @@ function addToCart(product) {
         <h1 class="text-center productname mt-4">
         Product Added Successfully!
         </h1>
-
         <div class="card mt-4 p-4 shadow-lg mx-auto"
         style="max-width: 500px;
         border-radius: 15px;
