@@ -23,11 +23,15 @@ var glasssets = [
     new allGadgets("Crystal Wine Glass Set of 6PCS", "2,150 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Crystal-Wine-Glass-Set-of-6-Golden-Line-1.jpg?resize=400%2C400&ssl=1"),
     new allGadgets("Ceramic Printed Cup-Saucer Set", "15,000 PKR", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Ceramic-Printed-Cup-Saucer-Set-of-6-Gift-Box.jpg?resize=400%2C400&ssl=1"),
 ];
-var grill = [
-    new allGadgets("BBQ Kettle Grill", "15000 PKR", "A versatile grill for outdoor cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/22.8-Inch-Charcoal-Grill-with-Thermometer-Ash-Catcher-%E2%80%93-BBQ-Kettle-Grill-5.jpg?resize=247%2C247&ssl=1"),
-    new allGadgets("BBQ Charcoal Grill", "12000 PKR", "A compact grill for quick and easy barbecuing.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Heavy-Duty-BBQ-Charcoal-Smoker-Grill-with-Chimney-Thermometer-%E2%80%93-Adjustable-Height.jpg?resize=247%2C247&ssl=1"),
-    new allGadgets("Portable Gas Grill", "20000 PKR", "A convenient grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/Portable-Round-Trolley-BBQ-Grill-3.jpg?resize=400%2C400&ssl=1"),
-    new allGadgets("Mini Grill", "20000 PKR", "A mini grill for on-the-go cooking.", "https://i0.wp.com/homegadgets.pk/wp-content/uploads/2026/04/BBQ-Fan-Air-Blower-Hand-Crank-%E2%80%93-Mini-Grill-Fire-Starter-Tool-for-Camping-5.jpg?resize=247%2C247&ssl=1"),
+var bowls = [
+    new allGadgets(" Small Black Lotus Bowls", "5000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772527734_ccccccccccccccccccc_(1).jpg"),
+    new allGadgets("Melamine 3 Black Medium Platter", "7000 PKR", "https://www.idealancy.pk/images/product_gallery/1772271434_ccccccccccccccccccc_(29).jpg"),
+    new allGadgets("Ceramic 3 Black Medium Platter", "20000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772271130_ccccccccccccccccccc_(25).jpg"),
+];
+var tray = [
+    new allGadgets("Melamine Black Serving Tray", "5000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1772038789_ccccccccccccccccccc_(2).jpg"),
+    new allGadgets("Melamine White Medium Bowl", "7000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1770111721_y1.jpg"),
+    new allGadgets("Melamine Black Serving Platter", "6000 PKR", "https://www.idealancy.pk/images/product_gallery/md_1770722191_ccccccccccccccccccc_(33).jpg"),
 ];
 
 
@@ -43,7 +47,7 @@ var grill = [
       </div>
       <div class="card-footer">
         <small class="text-body-secondary">Price:${this.price}</small>
-        <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Add to Cart</button>
+        <button onclick="addToCart('$')" class="bg-black text-white px-2 py-2 rounded border-0"> Add to Cart </button>
 
       </div>
     </div>
@@ -62,10 +66,35 @@ for(var item of dinnerset){
 for(var item of glasssets){
     ourItems.innerHTML += item.renderCard();
 }
-for(var item of grill){
+for(var item of bowls){
+    ourItems.innerHTML += item.renderCard();
+}
+for(var item of tray){
     ourItems.innerHTML += item.renderCard();
 }
 
+function addToCart(main, sub, type, product) {
+    var selectedProduct = allProducts[main][sub][type][product];
+    
+    var carousel = document.getElementById("carouselExampleSlidesOnly");
+    if(carousel) carousel.style.display = "none";
+
+    var mainContent = document.querySelector('.main-content');
+    mainContent.innerHTML = `
+        <h1 class="text-center text-success mt-4">Product Added Successfully!</h1>
+        <div class="card mt-4 p-4 shadow-lg mx-auto" style="max-width: 500px; border-radius: 15px; background: #c6bcffff;">
+            <img src="${selectedProduct.src}" class="card-img-top mx-auto" style="max-width: 350px; border-radius: 10px;" alt="...">
+            <div class="card-body text-center">
+                <h3 class="card-title text-primary fw-bold mt-2">${selectedProduct.name.toUpperCase()}</h3>
+                <p class="card-text fs-5 text-secondary mt-3">${selectedProduct.description || ''}</p>
+                <div class="mt-3">
+                    <h4 class="text-success fw-bold m-0 p-3" style="background: #e8f5e9; border-radius: 10px;">Price: ${selectedProduct.price}</h4>
+                </div>
+                <button onclick="location.reload()" class="btn btn-warning btn-lg mt-4 w-100 fw-bold">Continue Shopping</button>
+            </div>
+        </div>
+    `;
+}
 
 // function displayCat(cat){
 // ourMenu.innerHTML ="" ;

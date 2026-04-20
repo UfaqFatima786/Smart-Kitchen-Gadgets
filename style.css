@@ -34,19 +34,21 @@
 .navbar-nav .link:hover {
     color: #fd9f9f !important;
 }
-
-.bags {
-    color: rgb(3, 3, 248);
-    background-color: black;
-    border-radius: 2px solid red;
-    box-shadow: 2px slid red;
+.headinggadgets{
+    background-color: #832c2c;
+    color: #ffffff;
+    width: 500px;
+    text-align: center;
+    padding-right: 500px;
+    border-radius: 2px solid white !important;
 }
-
-.bags:hover {
-    color: rgb(1, 1, 141);
-    background-color: rgb(119, 117, 117);
-    border: #333;
-    text-shadow: rgb(180, 2, 2);
+.headinggadgets:hover{
+    background-color: #f55959;
+    color: #ffffff;
+    width: 500px;
+    text-align: center;
+    padding-right: 500px;
+    border-radius: 2px solid white !important;
     cursor: pointer;
 }
 
@@ -78,7 +80,8 @@
 }
 
 .container {
-    background-color: #ff6f6f;
+    background-color: #580101;
+;
 }
 
 .footer {
@@ -135,6 +138,15 @@
     border-top: 1px solid white;
     padding-top: 10px;
     font-size: 14px;
+}
+.about-heading{
+    color: #ffffff;
+}
+.card-footer{
+    background-color: #f55959 !important;
+}
+.card-body{
+    background-color: #f55959 !important;
 }
 
 /* Responsive mobile layout */
@@ -250,7 +262,7 @@
 .kitchen-para {
     font-size: 20px;
     line-height: 1.8;
-    color: #000000;
+    color: #ffffff;
     padding: 20px;
     transition: .3s;
 }
