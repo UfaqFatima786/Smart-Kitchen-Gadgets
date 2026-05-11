@@ -7,5 +7,15 @@ function products (a,b,c){
 var treandingProducts = [
     new products("Dinner Set", "1500 EGP", "images/dinner set.jpg"),
     new products("Glass Set", "500 EGP", "images/glass set.jpg"),
-        new products("Glass Set", "500 EGP", "images/glass set.jpg"),
+    new products("Glass Set", "500 EGP", "images/glass set.jpg"),
+]
+var bestSellers = [
+    new products("Dinner Set", "1500 EGP", "images/dinner set.jpg"),
+    new products("Glass Set", "500 EGP", "images/glass set.jpg"),
+    new products("Glass Set", "500 EGP", "images/glass set.jpg"),
+]
+var newArrivals = [
+    new products("Dinner Set", "1500 EGP", "images/dinner set.jpg"),
+    new products("Glass Set", "500 EGP", "images/glass set.jpg"),
+    new products("Glass Set", "500 EGP", "images/glass set.jpg"),
 ]
