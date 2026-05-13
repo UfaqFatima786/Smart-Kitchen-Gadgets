@@ -40,8 +40,8 @@ var spoon = [
 ];
 var plate = [
     new allGadgets("white Soup Spoon", "900 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407813_ccccccccccccccccccc_(6).jpg"),
-new allGadgets("melamine white plate", "900 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407624_ccccccccccccccccccc_(7).jpg"),
-new allGadgets("melamine black medium plate", "700 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407440_ccccccccccccccccccc_(8).jpg"),
+    new allGadgets("melamine white plate", "900 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407624_ccccccccccccccccccc_(7).jpg"),
+    new allGadgets("melamine black medium plate", "700 PKR", "https://www.idealancy.pk/images/product_gallery/md_1771407440_ccccccccccccccccccc_(8).jpg"),
 ];
 
 allGadgets.prototype.renderCard = function () {
@@ -126,21 +126,15 @@ function addToCart(product) {
 
     cart.push(product);
 
-    // hide carousel if exists
     var carousel = document.getElementById("carouselExampleSlidesOnly");
     if (carousel) {
         carousel.style.display = "none";
     }
-
-    // hide product grid
     var productsSection = document.getElementById("ouritems");
     if (productsSection) {
         productsSection.style.display = "none";
     }
-
-    // show success card screen
     var mainContent = document.querySelector(".container") || document.body;
-
     mainContent.innerHTML = `
     
         <h1 class="text-center productname mt-4">
@@ -149,12 +143,16 @@ function addToCart(product) {
         <div class="card mt-4 p-4 shadow-lg mx-auto"
         style="max-width: 500px;
         border-radius: 15px;
-        background: #ffbcbc;">
+        background: #c75555;">
 
             <img src="${product.src}"
-            class="card-img-top mx-auto"
+            class="card-img-top mx-auto my-5"
             style="max-width: 350px;
-            border-radius: 10px;">
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover:
+            border:2px solid black">
 
             <div class="card-body text-center">
 
@@ -164,7 +162,7 @@ function addToCart(product) {
 
                 <div class="mt-3">
                     <h4 class="text-success fw-bold m-0 p-3"
-                    style="background: #e8f5e9;
+                    style="background: #ffffff;
                     border-radius: 10px;">
                     Price: ${product.price}
                     </h4>
