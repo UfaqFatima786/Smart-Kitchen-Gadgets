@@ -93,8 +93,7 @@ border-radius: 20px;
 }
 
 .container {
-    background-color: #580101;
-    ;
+    background: linear-gradient(135deg, #d65656, #3d0000);
 }
 
 .footer {
@@ -163,15 +162,6 @@ border-radius: 20px;
 
 .card-body {
     background-color: #f55959 !important;
-}
-
-/* Responsive mobile layout */
-@media(max-width:768px) {
-    .footer-col {
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
 }
 
 .contact-form {
@@ -346,6 +336,11 @@ border-radius: 20px;
 
     .gadgets {
         height: auto;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
 }
